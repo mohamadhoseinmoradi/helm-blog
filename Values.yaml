@@ -1,0 +1,13 @@
+service:  
+ name: blog
+ type: NodePort
+ port: 80
+ targetPort: 2368
+ nodePort: 30080
+ protocol: TCP
+blog:
+ name: blog
+ replicas: 2
+ image: ghost:2.6-alpine
+ iamgePullPolicy: Always
+ containerPort: 2368
