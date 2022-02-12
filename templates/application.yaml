@@ -22,4 +22,8 @@ spec:
         - containerPort: {{ .Values.blog.containerPort }}
         env:
           - name: environment
-            value: development
+            value: {{ .Values.blog.env }}
+          - name: podIP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
