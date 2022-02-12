@@ -20,3 +20,6 @@ spec:
         imagePullPolicy: {{ .Values.blog.imagePullPolicy }}
         ports:
         - containerPort: {{ .Values.blog.containerPort }}
+        env:
+          - name: environment
+            value: development
