@@ -11,3 +11,4 @@ blog:
  image: ghost:2.6-alpine
  iamgePullPolicy: Always
  containerPort: 2368
+ env: development
